@@ -35,7 +35,7 @@ end
 # Manually added 6/1 by Renato Delboni
 gem 'actionpack', '~> 6.1.4.4'
 gem 'bulma-rails', '~> 0.6.1'
-# gem 'simple_form', '~> 3.5'
+gem 'simple_form'
 gem 'devise', '~> 4.4'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'carrierwave'

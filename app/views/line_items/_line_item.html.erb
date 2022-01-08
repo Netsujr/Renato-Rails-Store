@@ -9,16 +9,17 @@
   </div>
   <div class="column is-9">
     <strong><%= line_item.item.title %></strong>
-  </div>
-  <div class="column align-items-center">
-    <div class="content column is-9">
-      <%= truncate(line_item.item.description, length: 140) %>
-    </div>
-    <div class="has-text-right column is-2">
-      <strong class="f4"><%= number_to_currency(line_item.total_price) %></strong>
+    <div class="column align-items-center">
+      <div class="content column is-9">
+        <%= truncate(line_item.item.description, length: 140) %>
+      </div>
+      <div class="has-text-right column is-2">
+        <strong class="f4"><%= number_to_currency(line_item.total_price) %></strong>
+      </div>
     </div>
   </div>
 </div>
 <div class="has-text-right">
   <%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure about that?"}, class: "button is-small mb4"%>
 </div>
+<hr/>

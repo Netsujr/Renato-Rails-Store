@@ -53,7 +53,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Manually added 6/1 by Renato Delboni
-  gem 'better_errors', '~> 2.4'
+  # gem 'better_errors', '~> 2.4'
   gem 'guard', '~> 2.14', '>= 2.14.1'
   gem 'guard-livereload', '~> 2.5', '>=2.5.2'
 end

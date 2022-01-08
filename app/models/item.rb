@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Item < ApplicationRecord
   before_destroy :not_referenced_by_any_line_item
   has_many :line_items
@@ -11,8 +13,7 @@ class Item < ApplicationRecord
   validates :title, length: { maximum: 140, too_long: '%{count} maximum allowed characters.' }
   validates :price, numericality: { only_integer: true }, length: { maximum: 10 }
 
-
-  CONDITION = ['New', 'Great', 'Used']
+  CONDITION = %w[New Great Used].freeze
 
   private
 

@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Item:</strong>
-  <%= @line_item.item %>
+  <%= @line_item.item.id %>
 </p>
 <p>
   <strong>Cart:</strong>
-  <%= @line_item.cart %>
+  <%= @line_item.cart.id %>
 </p>
 <%= link_to 'Edit', edit_line_item_path(@line_item) %> |
 <%= link_to 'Back', line_items_path %>

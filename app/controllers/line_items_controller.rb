@@ -11,7 +11,8 @@ class LineItemsController < ApplicationController
   end
 
   # GET /line_items/1 or /line_items/1.json
-  def show; end
+  def show;
+  end
 
   # GET /line_items/new
   def new

@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-
+  has_many :line_items
   mount_uploader :image, ImageUploader
   serialize :image, JSON
   belongs_to :user, optional: true

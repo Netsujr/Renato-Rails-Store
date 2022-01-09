@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Item < ApplicationRecord
-  before_destroy :ensure_not_referenced_by_any_cart_item
+  before_destroy :not_referenced_by_any_cart_item
   has_many :cart_items
   belongs_to :user, optional: true
 

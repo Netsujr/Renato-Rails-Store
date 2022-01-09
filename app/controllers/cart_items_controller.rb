@@ -1,5 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :set_cart_item, only: %i[ show edit update destroy ]
+  before_action :set_cart, only: [:create]
 
   # GET /cart_items or /cart_items.json
   def index
@@ -20,7 +21,7 @@ class CartItemsController < ApplicationController
   end
 
   # POST /cart_items or /cart_items.json
- def create
+  def create
     item = Item.find(params[:item_id])
     @cart_item = @cart.add_item(item)
 
@@ -49,7 +50,7 @@ class CartItemsController < ApplicationController
   end
 
   # DELETE /cart_items/1 or /cart_items/1.json
- def destroy
+  def destroy
     @cart = Cart.find(session[:cart_id])
     @cart_item.destroy
 
@@ -60,13 +61,13 @@ class CartItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart_item
-      @cart_item = CartItem.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart_item
+    @cart_item = CartItem.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def cart_item_params
-      params.require(:cart_item).permit(:item_id, :cart_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def cart_item_params
+    params.require(:cart_item).permit(:item_id)
+  end
 end

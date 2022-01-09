@@ -14,7 +14,7 @@
         <h3 class="title is-5 has-text-centered"><%= @item.condition %></h3>
         <h4 class="title is-5 has-text-centered"><%= number_to_currency(@item.price) %></h4>
         <p class="has-text-centered mb4">Sold By: <%= @item.user.name %></p>
-        <%= button_to "Add to Cart", line_items_path(item_id: @item), class: 'button is-warning add-to-cart' %>
+        <%= button_to "Add to Cart", cart_items_path(item_id: @item), class: 'button is-warning add-to-cart' %>
       </div>
     </div>
     <%# <% end %> %>

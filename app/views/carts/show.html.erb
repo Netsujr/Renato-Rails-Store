@@ -3,7 +3,7 @@
 </div>
 <hr style="color: black;"/>
 <section class="section">
-  <%= render(@cart.line_items) %>
+  <%= render(@cart.cart_items) %>
   <div class="columns">
     <div class="column">
       <%= button_to "Empty Cart", @cart, method: :delete, data: { confirm: "Are you sure about that?" }, class: 'button is-danger' %>

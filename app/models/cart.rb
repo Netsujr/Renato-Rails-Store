@@ -15,4 +15,9 @@ class Cart < ApplicationRecord
     cart_items.to_a.sum { |item| item.total_price }
     # cart_items.to_a.sum(&:cart_item.total_price)
   end
+
+  def total_cart_items
+    total = cart_items.map(&:quantity).sum
+    return total if total.positive?
+  end
 end

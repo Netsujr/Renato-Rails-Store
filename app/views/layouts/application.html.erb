@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body class="<%= yield (:body_class) %>">
     <% if flash[:notice] %>
@@ -35,7 +35,7 @@
         <div class="navbar-end">
           <div class="ma2">
             <div class="field is-grouped">
-              <% if total_cart_items %>
+              <% if @cart.total_cart_items %>
                 <%= link_to cart_path(@cart), class:"navbar-item button is-danger" do %>
                   <span class="icon is-small">
                     <i class="fa fa-shopping-cart"></i>

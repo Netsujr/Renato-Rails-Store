@@ -22,6 +22,12 @@ $link-hover: #222;
 @import "items";
 
 
+.navbar-item:hover {
+  border-radius: 5px !important;
+  background-color: rgba(31, 156, 238, 0.5) !important;
+}
+
+
 .item-container {
   display: flex;
   height: 50%;

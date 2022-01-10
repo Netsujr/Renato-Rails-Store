@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   resources :cart_items
-  # resources :line_items
   resources :carts
   resources :items
   devise_for :users, controllers: {

@@ -1,7 +1,7 @@
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-4">
-      <h2 class="title is-2">Resend confirmation instructions</h2>
+      <h2 class="title text-center is-2">Resend confirmation instructions</h2>
       <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
         <%= f.full_error :confirmation_token %>

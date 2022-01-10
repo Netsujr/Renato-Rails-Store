@@ -24,11 +24,6 @@ $link-hover: #222;
 @import "font-awesome";
 
 
-#description {
-  font-size: 12px !important;
-
-}
-
 
 .navbar-item:hover {
   border-radius: 5px !important;
@@ -85,6 +80,12 @@ $link-hover: #222;
       bottom: 30%;
       display: flex;
       justify-content: space-between;
+    }
+
+    #description {
+      font-size: 12px !important;
+      position: absolute;
+      bottom: 25%;
     }
 
     .sold-by {

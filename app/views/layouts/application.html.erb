@@ -47,7 +47,7 @@
               <% end %>
               <% if user_signed_in? %>
                 <%= link_to 'Sell', new_item_path, class: "navbar-item button is-danger ml2" %>
-                <div class="has-dropdown is-hoverable">
+                <div class="navbar-item has-dropdown is-hoverable">
                   <%= link_to 'Account', edit_user_registration_path, class: "navbar-link border border-primary rounded ml2", style: "color: black" %>
                   <div class="navbar-dropdown is-right">
                     <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
@@ -55,8 +55,8 @@
                   </div>
                 </div>
               <% else %>
-                <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-danger" %>
-                <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-danger"%>
+                <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-danger ml2" %>
+                <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-danger ml2"%>
               <% end %>
             </div>
           </div>

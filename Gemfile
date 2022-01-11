@@ -58,7 +58,7 @@ group :development do
   gem 'guard-livereload', '~> 2.5', '>=2.5.2'
   gem 'font-awesome-sass'
   gem 'jquery-rails'
-
+  
 end
 
 group :test do

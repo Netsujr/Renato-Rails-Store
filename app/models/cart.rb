@@ -15,12 +15,12 @@ class Cart < ApplicationRecord
     cart_items.to_a.sum { |item| item.total_price }
   end
 
-  def cart_count_over_one
-    return total_cart_items if total_cart_items.positive?
-  end
-
   def total_cart_items
     total = cart_items.map(&:quantity).sum
     return total if total.positive?
+  end
+
+  def cart_count_over_one
+    return total_cart_items if total_cart_items.positive?
   end
 end

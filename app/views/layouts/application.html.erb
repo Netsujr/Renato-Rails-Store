@@ -35,13 +35,13 @@
         <div class="navbar-end">
           <div class="ma2">
             <div class="field is-grouped">
-              <% if total_cart_items %>
+              <% if @cart.total_cart_items %>
                 <%= link_to cart_path(@cart), class:"navbar-item button is-danger" do %>
                   <span class="icon is-small">
                     <i class="fa fa-shopping-cart"></i>
                   </span>
                   <span>Cart
-                    <%= cart_count_over_one %>
+                    <%= @cart.cart_count_over_one %>
                   </span>
                 <% end %>
               <% end %>
@@ -51,7 +51,7 @@
                   <%= link_to 'Account', edit_user_registration_path, class: "navbar-link border border-primary rounded ml2", style: "color: black" %>
                   <div class="navbar-dropdown is-right">
                     <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-item" %>
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                   </div>
                 </div>
               <% else %>

@@ -5,7 +5,7 @@ document.addEventListener('turbolinks:load'), function () {
   function handleFileSelect(event) {
     const files = event.target.files;
 
-    for (let i = 0; f; f = files[i]; i++) {
+    for (let i = 0; f; f = files[i], i++) {
       if (!f.type.match('image.**')) {
         continue;
       }
@@ -26,8 +26,4 @@ document.addEventListener('turbolinks:load'), function () {
   if (itemImage) {
     this.addEventListener('change', handleFileSelect, false);
   }
-
-
-
-
 }

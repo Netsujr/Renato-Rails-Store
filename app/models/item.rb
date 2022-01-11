@@ -2,8 +2,8 @@
 
 class Item < ApplicationRecord
   before_destroy :not_referenced_by_any_cart_item
-  has_many :cart_items
   belongs_to :user, optional: true
+  has_many :cart_items
 
   mount_uploader :image, ImageUploader
   serialize :image, JSON

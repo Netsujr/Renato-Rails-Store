@@ -58,7 +58,8 @@ group :development do
   gem 'guard-livereload', '~> 2.5', '>=2.5.2'
   gem 'font-awesome-sass'
   gem 'jquery-rails'
-  
+  gem 'sprockets-rails'
+
 end
 
 group :test do

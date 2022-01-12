@@ -5,6 +5,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require rails-ujs
 //= require turbolinks
 
 import Rails from "@rails/ujs";

@@ -304,6 +304,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   spring
+  sprockets-rails
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data

@@ -36,8 +36,6 @@ class ItemsController < ApplicationController
 
   # PATCH/PUT /items/1 or /items/1.json
   def update
-    @item = Item.find(params[:id])
-    @item.update(item_params)
 
     respond_to do |format|
       if @item.update(item_params)

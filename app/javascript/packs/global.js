@@ -1,11 +1,11 @@
 document.addEventListener("turbolinks:load", function () {
 
   const notification = document.querySelector('.global-notification');
+  // console.log("code reaches here");
 
   if (notification) {
     window.setTimeout(function () {
       notification.style.display = 'none';
-    }, 1500);
+    }, 3000);
   }
-  console.log("code reaches here");
 });

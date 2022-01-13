@@ -23,7 +23,9 @@ $link-hover: #222;
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
+.navbar-link {
+  line-height: 1rem !important;
+}
 
 .navbar-item:hover {
   border-radius: 5px !important;

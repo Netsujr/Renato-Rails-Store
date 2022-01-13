@@ -7,4 +7,5 @@ document.addEventListener("turbolinks:load", function () {
       notification.style.display = 'none';
     }, 1500);
   }
+  console.log("code reaches here");
 });

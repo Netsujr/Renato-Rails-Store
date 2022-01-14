@@ -122,3 +122,12 @@ $link-hover: #222;
     }
   }
 }
+
+.notification:not(:last-child) {
+    margin-bottom: 0;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}

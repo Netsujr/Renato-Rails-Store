@@ -124,10 +124,31 @@ $link-hover: #222;
 }
 
 .notification:not(:last-child) {
-    margin-bottom: 0;
-    height: 5px;
+  margin-bottom: 0;
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.navbar-gif {
+  img {
+    height: auto;
+    max-width: 6%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
+    position: absolute;
+    left: 240px;
+    animation: 30s ease-out 0s infinite img;
+  }
+}
+
+@keyframes img {
+  0% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(600px);
+  }
 }

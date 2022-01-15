@@ -34,8 +34,12 @@
         </div>
       </div>
       <div id="navbar" class="navbar-menu">
-        <div class='navbar-gif'> <%= image_tag ['cat-walking', 'cat-walking3'].sample %> </div>
-        <div class='navbar-gif'> <%= image_tag 'cat-walking' %> </div>
+        <% cat_array = ['cat-walking', 'cat-walking2'] %>
+        <% if cat_array[1] %>
+          <% unique_style = 'height: 50px;' %>
+        <% end %>
+        <div class='navbar-gif'> <%= image_tag cat_array.sample, style: "#{unique_style}"%>
+        </div>
         <div class="navbar-end">
           <div class="ma2">
             <div class="field is-grouped">

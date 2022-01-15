@@ -34,15 +34,18 @@
         </div>
       </div>
       <div id="navbar" class="navbar-menu">
-        <% cat_array = ['cat-walking', 'cat-walking2', 'cat-walking3', 'cat-walking4'] %>
+        <% cat_array = ['cat-walking', 'cat-walking2', 'cat-walking3', 'cat-walking4', 'cat-walking5'] %>
         <% current_cat =  cat_array.sample%>
         <% cat2_style = 'height: 50px;' %>
         <% cat3_style = 'height: 60px;' %>
+        <% cat5_style = 'top: 5px; max-width: 100px !important;' %>
         <div class='navbar-gif'> <%= image_tag current_cat, style: "#{
           if current_cat == cat_array[1]
           cat2_style
           elsif current_cat == cat_array[3]
           cat3_style
+          elsif current_cat == cat_array[4]
+          cat5_style
           end
           }"%>
         </div>
